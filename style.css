@@ -3,23 +3,28 @@
     padding: 0;
 }
 
-div.container {
+#container {
     display: flex;
     flex-direction: column;
+    transition: margin-left .5s;
 }
 
 .paragraph {
     color: white;
     font-family: "Libre Baskerville", serif;
+    overflow: hidden;
 }
 
-div.michael {
+#michael {
     position: fixed;
     top: 0;
+    left: 5px;
     font-family: "Oswald", serif;
-    font-size: 2em;
+    font-size: 4em;
     color: seashell;
+    transition: margin-left .5s;
 }
+
 
 div.top {
 
@@ -43,15 +48,35 @@ div.top {
     align-items: center;
 }
 
+.menu {
+    position: fixed;
+    width: 300px;
+    height: 400px;
+}
+
+div.paragraph-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-end;
+}
+
 div.spacer-top {
-    width: 20vw;
+    width: 30vw;
     height: 200px;
+    
 }
 
 div.top-paragraph {
-    width: 20vw;
-    font-size: 1.2em;
-    
+    width: 50vw;
+    font-size: 3em;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(161, 98, 4, 0.2);
+}
+
+#middle-top {
+    top: -100px;  
+    position: relative;
 }
 
 div.middle-top {
@@ -60,7 +85,7 @@ div.middle-top {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
     /* Style */
     background-color: orange;
@@ -73,12 +98,13 @@ div.spacer-middle {
 }
 div.middle-paragraph {
 
-    font-size: 1.5em;
+    margin-top: 10vh;   
+    font-size: 1.7em;
     width: 35vw;
 }
 
 div.middle-middle {
-    background-image: url("images/bokeh.jpg");
+    background-image: url("images/building.jpg");
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
@@ -93,6 +119,11 @@ div.middle-middle {
     align-items: center;
 }
 
+#middle-middle {
+    top: -400px;  
+    position: relative;
+}
+
 /* div.spacer-middle-middle {
     width: 35vw;
     height: 200px;
@@ -101,6 +132,15 @@ div.middle-middle {
 div.middle-middle-paragraph {
     width: 30vw;
     font-size: 1.2em;
+}
+
+div.spacer-middle-bottom {
+    width: 30vw;
+}
+
+div.middle-bottom-paragraph {
+    width: 40vw;
+    font-size: 2em;
 }
 
 div.middle-bottom {
@@ -115,6 +155,11 @@ div.middle-bottom {
     height: 1000px;
 }
 
+#middle-bottom {
+    top: -590px;  
+    position: relative;
+}
+
 div.bottom {
     background-image: url("images/self.jpg");
     width: 100%;
@@ -123,6 +168,27 @@ div.bottom {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#github {
+    background-color: silver;
+    border-radius: 20%;
+    margin: 25px 50px;
+
+
+}
+
+div.linkedin {
+    margin: 25px 50px;  
+    border-radius: 20%;
+    background-color: silver;
+
+ 
 }
 
 div.bottom-bar {
@@ -131,143 +197,68 @@ div.bottom-bar {
 }
 
 
-a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+
+
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #222;
+    overflow-x: hidden; /*disable horizontal scroll */
+    padding-top: 60px;
+    transition: 0.5s;
 }
 
-a:hover
-{
-  color: tomato;
+.sidenav a {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: "Libre Baskerville", serif;
+    /* text-transform: lowercase; */
 }
 
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+.sidenav a:hover {
+    color: seashell;
 }
 
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+.sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    font-size: 36px;
+    margin-left: 10px;
+    color: orange;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+@media screen and (max-height: 550px){
+
+    .sidenav {width: 100vw;}
+    #michael {visibility: hidden;}
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
+.hamburger {
+    position: fixed;
+    display: inline-block;
+    top: 85px;
+    left: 5px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
+.bar1, .bar2, .bar3 {
+    width: 45px;
+    height: 7px;
+    background-color: rgba(40, 40, 40, .2);
+    margin: 7px 0px; 
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: fixed;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
