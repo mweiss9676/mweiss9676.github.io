@@ -61,7 +61,7 @@ div.top {
     /* align-self: flex-start; */
     top: -5px;
     left: 5vw;
-    font-family: "Oswald", serif;
+    font-family: "Oswald", sans-serif;
     font-size: 4em;
     color: seashell;
     transition: margin-left .5s;
@@ -97,6 +97,7 @@ div.top-paragraph {
     font-size: 3em;
     text-align: left;
     text-shadow: 1px 1px 2px rgba(161, 98, 4, 0.2);
+    
 }
 
 #middle-top {
@@ -108,9 +109,9 @@ div.middle-top {
 
     /* Layout */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
 
     /* Style */
     background-color: orange;
@@ -119,13 +120,23 @@ div.middle-top {
 
 div.spacer-middle {
     width: 50vw;
-    height: 200px;
+    height: 5vh;
 }
 div.middle-paragraph {
 
     margin-top: 10vh;   
+    margin-right: 10vh;
     font-size: 1.7em;
     width: 35vw;
+
+    border-style: solid;
+    border-color: seashell;
+    border-width: 3px;
+    z-index: 30;
+    padding: 20px;
+    background-color: orange;
+
+
 }
 
 div.middle-middle {
@@ -161,6 +172,7 @@ div.middle-middle-paragraph {
 
 div.spacer-middle-bottom {
     width: 30vw;
+    height: 5vw;
 }
 
 div.middle-bottom-paragraph {
@@ -170,14 +182,14 @@ div.middle-bottom-paragraph {
     border-color: seashell;
     border-width: 3px;
     z-index: 30;
-    padding: 10px;
+    padding: 20px;
     background-color: rgba(0, 197, 197, 1);
 }
 
 div.middle-bottom {
     /* Layout */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
@@ -187,7 +199,7 @@ div.middle-bottom {
 }
 
 #middle-bottom {
-    top: -590px;  
+    top: -100px;  
     position: relative;
 }
 
@@ -211,9 +223,10 @@ div.bottom {
     background-color: silver;
     border-radius: 20%;
     margin: 25px 50px;
+
 }
 
-div.linkedin {
+#linkedin {
     margin: 25px 50px;  
     border-radius: 20%;
     background-color: silver; 
