@@ -1,86 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AboutMe</title>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Oswald:700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montaga|Montserrat|Source+Sans+Pro" rel="stylesheet">    <title>Document</title>
 </head>
-
 <body>
-
-    <div id="sideNavigation" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#top">Welcome</a>
-        <a href="#middle-top">About</a>
-        <a href="#middle-middle">Portfolio</a>
-        <a href="#middle-bottom">Not Sure</a>
-        <a href="#bottom-bar">Contact</a>
-        </div>
-        <spa id="top">
-            </span>
-            <div class="top-bar">
-                <div id="michael">MICHAEL WEISS</div>
-                <div class="hamburger" id="hamburger" onclick="openNav()">
-                    <div class="bar1 bar"></div>
-                    <div class="bar2 bar"></div>
-                    <div class="bar3 bar"></div>
+    <header>
+        <div id="top"></div>
+        <a href="https://www.linkedin.com/in/weiss-mike"><h1 id="headline">weiss<hr></h1></a>
+    </header>
+    <div class="content">
+        <div class="page-1">
+            <p class="about-me">Hi there. I'm Mike.<br> I'm a Fine Arts graduate with hospitality experience turned software developer.
+                I write predominantly in C# within the .NET Framework and ASP.NET but I also enjoy Javascript, HTML, CSS
+                and can't wait to learn a lot more.
+            </p>
+            <a id="nav" href="#bottom"><img id="arrow" src="images/down.png" alt="navigation arrow" onclick="rotateArrow()"></a>
+        </div> <!-- end page-1 -->
+        <div class="page-2">
+            <div class="boxes">
+            <a href="https://mweiss9676.github.io/AdventCalendarCSharp/">
+                <div class="box-1 box"></div>
+                <div class="box-text">
+                    <p class="info">Advent of Code 2017</p>
+                    <p class="hidden-small"><span class="bold">Advent of Code 2017</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae neque sequi recusandae.<hr></p>
                 </div>
+            </a>
+            <div class="box-2 box"></div>
+            <div class="box-text">
+                <p class="info">Park Reservations</p>
+                <p class="hidden-small"><span class="bold">Park Reservation System</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae neque sequi recusandae.<hr></p>
             </div>
-            <div id="container">
-                <div class="top">
-            <div class="paragraph-row">
-                <div class="spacer-top"></div>
-                <div class="top-paragraph paragraph">
-                    <!-- <p>Programming</p> -->
-                    <!-- <p>is the love of my life.</p> -->
-                </div>
+            <div class="box-3 box"></div>
+            <div class="box-text">
+                <p class="info">Vending Machine</p>
+                <p class="hidden-small"><span class="bold">Vending Machine</span><br>console application for processing transactions with intricate animated CLI and separated machine logic and DALs . <hr></p>
             </div>
-        </div>
-        <div class="middle-top">
-            <span id="middle-top"></span>
-            <div class="project-1 project">
-                <img src="" alt="">
-            </div>
-            <div class="spacer-middle"></div>
-            <div class="middle-paragraph paragraph">
-                <p>My education in Fine Arts and Design have taught me the value of being detail 
-                    oriented, and the importance of the marriage of form and function. I place a great emphasis on peer critique and I think the best ideas are found when 
-                    disparate viewpoints come together openly.
-                </p>
-            </div>
-        </div>
-        <div class="middle-middle">
-            <span id="middle-middle"></span>
-            <div class="spacer-middle-middle"></div>
-            <div class="middle-middle-paragraph paragraph">
-                <div class="circus-gif gif"></div>
-            </div>
-        </div>
-        <div class="middle-bottom">
-            <span id="middle-bottom"></span>
-            <div class="spacer-middle-bottom"></div>
-                <div class="middle-bottom-paragraph paragraph">
-                    <p> My experience in the hospitality industry has taught me to be
-                            conscientious of other people's viewpoints and the importance of empathy in 
-                            professional relationships and my goal is to bring these strengths along with a natural talent for coding 
-                            to an employer that understands the need for driven developers that can 
-                            communicate with the technical and the non-technical alike. 
-                    </p>
-                </div>
-        </div>
-        <div class="bottom" id="bottom">
-            <a href="https://github.com/mweiss9676"><img id="github" src="images/github.png" alt="github" style="width: 10vw; height: 10vw;"></a>
-            <a href="http://www.linkedin.com/in/weiss-mike"><img id="linkedin" src="images/linkedin.png" alt="linkedin" style="width: 10vw; height: 10vw;"></a>
-        </div>
-        <div class="bottom-bar" id="bottom-bar"></div>
+            <div id="bottom"></div>
+        </div> <!-- end boxes -->
+        </div> <!-- end page-2 -->
     </div>
-
-
 </body>
-
 </html>
