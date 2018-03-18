@@ -1,251 +1,247 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition-duration: 1s;
+    transition: none;
 }
 
-header {
-    height: 60px;
+/************* ANIMATIONS **************/
+
+@keyframes slide-in-github {
+    0% {
+        right: 0;
+        transform: rotate(360deg);
+    
+    }
+    100% {
+        right: 9rem;
+        display: block;
+        transform: rotate(0deg);
+    }
 }
 
-.page-1 {
-    height: calc(100vh - 60px);
-    position: relative;
+@keyframes slide-in-linkedin {
+    0% {
+        right: 0;
+        transform: rotate(360deg);
+    
+    }
+    100% {
+        right: 18rem;
+        display: block;
+        transform: rotate(0deg);
+    }
 }
 
-.page-2 {
+@keyframes slide-in-instagram {
+    0% {
+        right: 0;
+        transform: rotate(360deg);
+    
+    }
+    100% {
+        right: 27rem;
+        display: block;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes scroll {
+    0% {left: 0;}
+    100% {left: -290%;}
+} 
+
+/************* END ANIMATIONS **************/
+
+:root {
+    --font-color-primary:rgb(77, 77, 77);
+    --font-color-secondary: black;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-image: url("/images/wood2.jpg");
+    background-color: rgb(2, 2, 2);    
+    background-blend-mode: screen;
+    background-size: cover;
     height: 100vh;
-}
-
-#arrow {
-    width: 60px;
-    height: 60px;
-    opacity: .05;
-    position: fixed;
-    left: 50%;
-    margin-left: -30px;
-    transition-duration: 0s;
-    bottom: 20px;
-    z-index: 0;
-}
-
-
-#headline hr {
-    transition-duration: 0s;
-    width: 80px;
-    margin-top: 5px;
-    position: relative;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ddd;
-    padding: 0; 
-}
-
-#headline {
-    transition-duration: 0s;
-    color: rgba(228, 169, 60, 0.74);
-    font-family: 'Montaga', serif;
-    font-size: 16px;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 5%;
-    font-weight: 100;
-}
-
-.boxes {
-    left: 50%;
-    /* height: 85vh; */
-    height: auto;
-    width: 80vw;
-    margin: auto auto;
-    padding: 20px 20px 40px 0px;
-    /* padding: 20px;
-    padding-left: 0px; */
-    float: left;
-    box-shadow: 1px 1.5rem 2rem 0rem lightgray;
-}
-
-
-.content {
-    margin: auto auto;
-    margin-top: 10px;
-    min-width: 300px;
     width: 100vw;
-    overflow: hidden;
-}
+} 
 
-.about-me {
-    font-family: "Montaga", sans-serif;
-    left: 50%;
-    /* transform: translateX(-50%); */
-    font-size: 15px;
-    text-align: left;
-    color: rgb(145, 145, 145);
-    font-weight: 100;
-    font-size: 1.2rem;
-    padding: 30px 15px 40px 15px;
-    /* margin: 0 15px; */
-    /* margin-bottom: 40vh; */
-    box-shadow: 2px 1.5rem 2rem -1rem lightgray;
-}
-
-.box {
-    height: 150px;
-    margin-top: 10px;
-    width: 66vw;
-    float: left;
-    overflow: hidden;
-}
-
-.box-text {
-    float: left;
-    width: auto;
-    height: 150px;
-    margin-top: 10px;
-    position: relative;
-}
-
-.box-text p {
-    position: absolute;
-    left: 5px;
+.words {
+    font-family: "Julius Sans One", sans-serif;
     text-transform: uppercase;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 15px;
-    color: rgb(202, 202, 202);
-}
-.box-1 {
-    background-color: rgb(29, 29, 29);
-    background-image: url(images/treebnw.png);
-    background-size: 250px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
-.box-2 {
-    background-color: rgb(29, 29, 29);
-    background-image: url(images/campsite.png);
-    background-size: 250px;
-    background-repeat: no-repeat;
-    background-position: center top;
-}
-
-.box-3 {
-    background-color: rgb(29, 29, 29);
-    background-image: url(images/circus5.png);
-    background-size: 250px;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.info {
-    color: rgb(230, 227, 227);
-    font-family: 'Montaga', serif;
-    float: right;
-    writing-mode: tb-rl;
+    color: white;
+    font-weight: 100;
+    font-size: 3rem;
+    padding: 2rem;
     position: absolute;
-    top: 0;
 }
 
-.hidden-small {
+#word1 {
+    writing-mode: vertical-lr;
+    font-size: 5rem;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+#word2 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 5rem;
+    top: 40%;
+}
+
+#word3 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    color: rgba(240, 240, 240, .2);
+    font-size: 30rem;
+    position: absolute;
+    padding: 0;
+    top: 40%;
+    animation: scroll 30000ms linear none infinite normal;
+}
+
+#word4 {
+    right: 18vw;
+    top: 20vh;
+    font-size: 3rem;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    opacity: 0.3;
     display: none;
 }
 
-/***************** MEDIA QUERIES ****************/
-
-@media only screen and (min-width: 570px) {
-    .about-me {
-        padding: 80px 30px 120px 30px;
-    }
-    
-    .page-1 {
-        height: 35vh;
-    }
-
-    #arrow {
-        display: none;
-    }
-
-    .page-2 {
-        height: auto;
-    }
-
-    .box {
-        margin-top: 20px;
-    }
-
-    #headline hr {
-        width: 150px;
-        margin-top: 20px;
-    }
-
-    .content {
-        height: 93vh;
-        position: absolute;
-        top: 7vh;
-        margin-top: 0;
-    }
-
+.selfy {
+    background-image: url("/images/selfy3.jpg");
+    background-size: cover;
+    background-position: 10%;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 6;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: solid 4px white;
+    margin: 1rem;
 }
 
-@media only screen and (min-width: 767px) {
-    .box-1 {
-        background-size: cover;
-        background-position: 50% 75%;
-    }
-
-    .box-2 {
-        background-size: 100%;
-        background-position: 50% 85%;
-    }
-
-    .box-3 {
-        background-image: url(images/circus4.png);
-        background-size: cover;
-        background-position: 0% 98%;
-    }
-
-    .box {
-        margin-top: 0;
-        margin-bottom: 40px;
-    }
-
-    .boxes {
-        width: auto;
-    }
-
-    .info {
-        display: none;
-    }
-
-    .hidden-small {
-        display: block;
-        height: 150px;
-        float: left;
-        width: 33vw;
-        padding: 20px;
-        padding-top: 0;
-    }
-
-    .bold hr {
-        width: 80px;
-        margin-top: 5px;
-        position: relative;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #ddd;
-        padding: 0; 
-        }
-
-    .bold {
-        font-weight: bold;
-        color: rgba(228, 169, 60, 0.74);
-        font-size: 20px;
-        font-family: "Source Sans Pro", serif;
-        
-    }
+.link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: solid 4px white;
 }
 
-/***************** END MEDIA QUERIES ****************/
+.selfy:hover {
+    background-image: url("/images/selfy.jpg");
+}
+
+.selfy:hover ~ .links {
+    display: block;
+}
+
+.selfy:hover ~ .overlay {
+    display: block;
+}
+
+.selfy:hover ~ .container {
+    background-blend-mode: luminosity;
+}
+
+.links:hover ~ .overlay{
+    display: block;
+}
+
+.links:hover ~ .container {
+    background-blend-mode: luminosity;
+}
+
+.links:hover {
+    display: flex;
+    justify-content: left;    
+}
+
+.links:hover > .link{
+    /* position: relative; */
+    display: relative;
+}
+
+
+.links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    height: 10rem;
+    width: 100vw;
+    z-index: 2;
+    display: none;
+}
+
+
+.links:hover > .github, .selfy:hover ~ .links > .github {
+    animation-name: slide-in-github;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+.links:hover > .linkedin, .selfy:hover ~ .links > .linkedin {
+    animation-name: slide-in-linkedin;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+.links:hover > .instagram, .selfy:hover ~ .links > .instagram {
+    animation-name: slide-in-instagram;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+.github {
+    background-image: url("/icons/github2.svg");
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+}
+
+.linkedin {
+    background-image: url("/icons/linkedin2.svg");
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.instagram {
+    background-image: url("/icons/instagram.svg");
+    background-size: cover;    
+    position: absolute;
+    right: 0;
+}
+
