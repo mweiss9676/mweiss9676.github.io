@@ -4,6 +4,17 @@
     transition: none;
 }
 
+/********** VARIABLES **********/
+
+:root {
+    --font-color-primary:rgb(77, 77, 77);
+    --font-color-secondary: black;
+    --roll-out-menu-duration: 800ms;
+}
+
+/********** END VARIABLES **********/
+
+
 /************* ANIMATIONS **************/
 
 @keyframes slide-in-github {
@@ -52,10 +63,6 @@
 
 /************* END ANIMATIONS **************/
 
-:root {
-    --font-color-primary:rgb(77, 77, 77);
-    --font-color-secondary: black;
-}
 
 body {
     overflow: hidden;
@@ -90,6 +97,7 @@ body {
     color: white;
     position: absolute;
     overflow: hidden;
+    user-select: none;
 }
 
 #word6 {
@@ -128,6 +136,8 @@ body {
     font-size: 3rem;
     font-weight: 100;
 }
+
+
 
 #word10 {
     left: 20%;
@@ -211,7 +221,7 @@ body {
 
 .links:hover > .github, .selfy:hover ~ .links > .github {
     animation-name: slide-in-github;
-    animation-duration: 1000ms;
+    animation-duration: var(--roll-out-menu-duration);
     animation-fill-mode: forwards;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
@@ -219,7 +229,7 @@ body {
 
 .links:hover > .linkedin, .selfy:hover ~ .links > .linkedin {
     animation-name: slide-in-linkedin;
-    animation-duration: 1000ms;
+    animation-duration: var(--roll-out-menu-duration);
     animation-fill-mode: forwards;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
@@ -227,7 +237,7 @@ body {
 
 .links:hover > .instagram, .selfy:hover ~ .links > .instagram {
     animation-name: slide-in-instagram;
-    animation-duration: 1000ms;
+    animation-duration: var(--roll-out-menu-duration);
     animation-fill-mode: forwards;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
@@ -323,6 +333,7 @@ body {
         color: white;
         position: absolute;
         overflow: hidden;
+        user-select: none;
     }
 
 
@@ -390,7 +401,7 @@ body {
 
     .selfy:hover ~ .links > .instagram {
         animation-name: vertical-instagram;
-        animation-duration: 1000ms;
+        animation-duration: var(--roll-out-menu-duration);
         animation-fill-mode: forwards;
         animation-direction: normal;
         animation-timing-function: ease-in-out;    
@@ -398,7 +409,7 @@ body {
 
     .selfy:hover ~ .links > .linkedin {
         animation-name: vertical-linkedin;
-        animation-duration: 1000ms;
+        animation-duration: var(--roll-out-menu-duration);
         animation-fill-mode: forwards;
         animation-direction: normal;
         animation-timing-function: ease-in-out;    
@@ -406,7 +417,7 @@ body {
 
     .selfy:hover ~ .links > .github {
         animation-name: vertical-github;
-        animation-duration: 1000ms;
+        animation-duration: var(--roll-out-menu-duration);
         animation-fill-mode: forwards;
         animation-direction: normal;
         animation-timing-function: ease-in-out;    
