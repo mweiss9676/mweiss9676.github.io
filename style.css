@@ -68,22 +68,22 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 } 
 
 .words {
     font-family: "Julius Sans One", sans-serif;
     text-transform: uppercase;
     color: white;
-    font-weight: 100;
-    font-size: 3rem;
-    padding: 2rem;
     position: absolute;
+    overflow: hidden;
 }
 
 #word1 {
     writing-mode: vertical-lr;
     font-size: 5rem;
     padding-left: 0;
+    font-weight: 100;
     padding-top: 0;
 }
 
@@ -110,6 +110,7 @@ body {
     right: 18vw;
     top: 20vh;
     font-size: 3rem;
+    font-weight: 100;
 }
 
 
@@ -245,3 +246,114 @@ body {
     right: 0;
 }
 
+/********** MEDIA QUERIES ***********/
+
+@media screen and (max-width: 1000px){
+
+/* ANIMATIONS */
+@keyframes vertical-instagram {
+    0%{
+        right: 0;
+        bottom: 0;
+        transform: rotate(360deg);
+    }
+    100%{
+        bottom: 85%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes vertical-linkedin {
+    0%{
+        right: 0;
+        bottom: 0;
+        transform: rotate(360deg);
+    }
+    100%{
+        bottom: 170%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes vertical-github {
+    0%{
+        right: 0;
+        bottom: 0;
+        transform: rotate(360deg);
+    }
+    100%{
+        bottom: 260%;
+        transform: rotate(0deg);
+    }
+}
+
+
+/* END ANIMATIONS */
+
+
+
+    #word4 {
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+    }
+
+    #word1 {
+        opacity: .6;
+        bottom: 0;
+    }
+
+    #word2 {
+        opacity: .2;
+        left: 5%;
+        top: 0;
+        font-size: 20rem;
+    }
+
+    #word5 {
+        opacity: .4;
+        right: 0;
+        top: 30%;
+        font-family: "Archivo Narrow", sans-serif;
+        font-size: 10rem;      
+        writing-mode: vertical-lr;
+        display: none;
+  
+    }
+
+    .instagram {
+        z-index: 8;
+    }
+    .linkedin {
+        z-index: 6;
+    }
+    .github {
+        z-index: 4;
+    }
+
+    .selfy:hover ~ .links > .instagram {
+        animation-name: vertical-instagram;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;    
+    }
+
+    .selfy:hover ~ .links > .linkedin {
+        animation-name: vertical-linkedin;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;    
+    }
+
+    .selfy:hover ~ .links > .github {
+        animation-name: vertical-github;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;    
+    }
+}
+/********** END MEDIA QUERIES ***********/
