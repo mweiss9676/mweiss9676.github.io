@@ -46,8 +46,8 @@
 }
 
 @keyframes scroll {
-    0% {left: 0;}
-    100% {left: -290%;}
+    0% {left: 100%;}
+    100% {left: -180%;}
 } 
 
 /************* END ANIMATIONS **************/
@@ -62,57 +62,15 @@ body {
 }
 
 .container {
-    background-image: url("/images/wood2.jpg");
+    background-image: url("/images/wood-sm.jpg");
     background-color: rgb(2, 2, 2);    
     background-blend-mode: screen;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    position: relative;
 } 
-
-.words {
-    font-family: "Julius Sans One", sans-serif;
-    text-transform: uppercase;
-    color: white;
-    position: absolute;
-    overflow: hidden;
-}
-
-#word1 {
-    writing-mode: vertical-lr;
-    font-size: 5rem;
-    padding-left: 0;
-    font-weight: 100;
-    padding-top: 0;
-}
-
-#word2 {
-    font-family: "Archivo Black", sans-serif;
-    font-weight: bold;
-    color: white;
-    font-size: 5rem;
-    top: 40%;
-}
-
-#word3 {
-    font-family: "Archivo Black", sans-serif;
-    font-weight: bold;
-    color: rgba(240, 240, 240, .2);
-    font-size: 30rem;
-    position: absolute;
-    padding: 0;
-    top: 40%;
-    animation: scroll 30000ms linear none infinite normal;
-}
-
-#word4 {
-    right: 18vw;
-    top: 20vh;
-    font-size: 3rem;
-    font-weight: 100;
-}
-
 
 .overlay {
     position: fixed;
@@ -125,8 +83,60 @@ body {
     display: none;
 }
 
+
+.words-lg {
+    font-family: "Julius Sans One", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    overflow: hidden;
+}
+
+#word6 {
+    writing-mode: vertical-lr;
+    font-size: 10rem;
+    padding-left: 0;
+    font-weight: 100;
+    padding-top: 0;
+    opacity: .9;
+}
+
+#word7 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 12rem;
+    bottom: 0;
+    left: 50%;
+    opacity: .3;
+}
+
+#word8 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    color: rgba(240, 240, 240, .2);
+    font-size: 30rem;
+    position: absolute;
+    padding: 0;
+    top: 40%;
+    animation: scroll 20000ms linear none infinite normal;
+}
+
+#word9 {
+    right: 18vw;
+    top: 20vh;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+#word10 {
+    left: 20%;
+    top: 50%;
+    font-size: 10rem;
+}
+
 .selfy {
-    background-image: url("/images/selfy3.jpg");
+    background-image: url("/images/selfy-sm-bw.jpg");
     background-size: cover;
     background-position: 10%;
     cursor: pointer;
@@ -153,7 +163,7 @@ body {
 }
 
 .selfy:hover {
-    background-image: url("/images/selfy.jpg");
+    background-image: url("/images/selfy-sm.jpg");
 }
 
 .selfy:hover ~ .links {
@@ -248,6 +258,13 @@ body {
 
 /********** MEDIA QUERIES ***********/
 
+@media screen and (min-width: 1001px){
+    .words-sm {
+        display: none;
+    }
+}
+
+
 @media screen and (max-width: 1000px){
 
 /* ANIMATIONS */
@@ -287,21 +304,37 @@ body {
     }
 }
 
+@keyframes scroll-sm {
+    0% {left: 100%;}
+    100% {left: -800%;}
+} 
+
 
 /* END ANIMATIONS */
 
 
-
-    #word4 {
-        top: 10vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 300px;
+    .words-lg {
+        display: none;
     }
+
+    .words-sm {
+        font-family: "Julius Sans One", sans-serif;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        overflow: hidden;
+    }
+
 
     #word1 {
         opacity: .6;
-        bottom: 0;
+        bottom: 0;     
+        writing-mode: vertical-lr;
+        font-size: 8rem;
+        padding-left: 0;
+        font-weight: 100;
+        padding-top: 0;
+
     }
 
     #word2 {
@@ -309,6 +342,29 @@ body {
         left: 5%;
         top: 0;
         font-size: 20rem;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+        
+    #word3 {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: bold;
+        color: rgba(240, 240, 240, .2);
+        font-size: 30rem;
+        position: absolute;
+        padding: 0;
+        top: 40%;
+        animation: scroll-sm 20000ms linear none infinite normal;
+    }    
+
+    #word4 {
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        font-size: 3rem;
+        font-weight: 100;
     }
 
     #word5 {
