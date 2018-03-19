@@ -61,6 +61,141 @@
     100% {left: -180%;}
 } 
 
+@keyframes glitch-animation {
+    0% {
+        clip: rect(70px, 450px, 76px, 0);
+    }
+    5% {
+        clip: rect(29px, 450px, 16px, 0);
+    }
+    10% {
+        clip: rect(76px, 450px, 3px, 0);
+    }
+    15% {
+        clip: rect(42px, 450px, 78px, 0);
+    }
+    20% {
+        clip: rect(15px, 450px, 13px, 0);
+    }
+    25% {
+        clip: rect(53px, 450px, 68px, 0);
+    }
+    30% {
+        clip: rect(2px, 450px, 32px, 0);
+    }
+    35% {
+        clip: rect(45px, 450px, 45px, 0);
+    }
+    40% {
+        clip: rect(78px, 450px, 5px, 0);
+    }
+    45% {
+        clip: rect(46px, 450px, 12px, 0);
+    }
+    50% {
+        clip: rect(5px, 450px, 45px, 0);
+    }
+    55% {
+        clip: rect(5px, 450px, 45px, 0);
+    }
+    60% {
+        clip: rect(34px, 450px, 76px, 0);
+    }
+    65% {
+        clip: rect(12px, 450px, 89px, 0);
+    }
+    70% {
+        clip: rect(34px, 450px, 80px, 0);
+    }
+    75% {
+        clip: rect(22px, 450px, 87px, 0);
+    }
+    80% {
+        clip: rect(23px, 450px, 99px, 0);
+    }
+    85% {
+        clip: rect(5px, 450px, 13px, 0);
+    }
+    90% {
+        clip: rect(7px, 450px, 7px, 0);
+    }
+    95% {
+        clip: rect(50px, 450px, 3px, 0);
+    }
+    100% {
+        clip: rect(55px, 450px, 1px, 0);
+    }
+
+
+}
+
+@keyframes glitch-animation2 {
+    0% {
+        clip: rect(7px, 450px, 10px, 0);
+    }
+    5% {
+        clip: rect(9px, 450px, 34px, 0);
+    }
+    10% {
+        clip: rect(23px, 450px, 30px, 0);
+    }
+    15% {
+        clip: rect(5px, 450px, 40px, 0);
+    }
+    20% {
+        clip: rect(15px, 450px, 89px, 0);
+    }
+    25% {
+        clip: rect(99px, 450px, 68px, 0);
+    }
+    30% {
+        clip: rect(44px, 450px, 35px, 0);
+    }
+    35% {
+        clip: rect(34px, 450px, 4px, 0);
+    }
+    40% {
+        clip: rect(23px, 450px, 0px, 0);
+    }
+    45% {
+        clip: rect(68px, 450px, 2px, 0);
+    }
+    50% {
+        clip: rect(23px, 450px, 95px, 0);
+    }
+    55% {
+        clip: rect(89px, 450px, 5px, 0);
+    }
+    60% {
+        clip: rect(67px, 450px, 88px, 0);
+    }
+    65% {
+        clip: rect(2px, 450px, 35px, 0);
+    }
+    70% {
+        clip: rect(23px, 450px, 8px, 0);
+    }
+    75% {
+        clip: rect(53px, 450px, 23px, 0);
+    }
+    80% {
+        clip: rect(34px, 450px, 12px, 0);
+    }
+    85% {
+        clip: rect(50px, 450px, 1px, 0);
+    }
+    90% {
+        clip: rect(77px, 450px, 70px, 0);
+    }
+    95% {
+        clip: rect(10px, 450px, 78px, 0);
+    }
+    100% {
+        clip: rect(98px, 450px, 3px, 0);
+    }
+
+}
+
 /************* END ANIMATIONS **************/
 
 
@@ -137,7 +272,33 @@ body {
     font-weight: 100;
 }
 
+#word9::before, #word9::after {
+    content: "{WELCOME}";
+    position: absolute;
+    /* font-family: "Archivo Black"; */
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    height: 100%;    
+}
 
+#word9::before {
+    left: -2px;
+    text-shadow: 2px 0 blue;
+    clip-path: rect(44px, 450px, 50px, 0);
+    animation: glitch-animation 2s infinite linear 4s alternate-reverse;
+}
+
+#word9::after {
+    left: -1px;
+    text-shadow: -1px 0 red;
+    animation: glitch-animation2 4s infinite linear 3s alternate-reverse;
+
+}
 
 #word10 {
     left: 20%;
@@ -290,6 +451,7 @@ body {
     }
 }
 
+
 @keyframes vertical-linkedin {
     0%{
         right: 0;
@@ -377,6 +539,35 @@ body {
         font-size: 3rem;
         font-weight: 100;
     }
+
+    
+#word4::before, #word4::after {
+    content: "{WELCOME}";
+    position: absolute;
+    /* font-family: "Archivo Black"; */
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    height: 100%;    
+}
+
+#word4::before {
+    left: -2px;
+    text-shadow: 2px 0 blue;
+    clip-path: rect(44px, 450px, 50px, 0);
+    animation: glitch-animation 4s infinite linear 4s alternate-reverse;
+}
+
+#word4::after {
+    left: -1px;
+    text-shadow: -1px 0 red;
+    animation: glitch-animation2 10s infinite linear 3s alternate-reverse;
+
+}
 
     #word5 {
         opacity: .4;
