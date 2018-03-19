@@ -275,7 +275,6 @@ body {
 #word9::before, #word9::after {
     content: "{WELCOME}";
     position: absolute;
-    /* font-family: "Archivo Black"; */
     top: 0;
     left: 0;
     right: 0;
@@ -363,7 +362,6 @@ body {
 }
 
 .links:hover > .link{
-    /* position: relative; */
     display: relative;
 }
 
@@ -438,7 +436,8 @@ body {
 
 @media screen and (max-width: 1000px){
 
-/* ANIMATIONS */
+/*************** ANIMATIONS *******************/
+
 @keyframes vertical-instagram {
     0%{
         right: 0;
@@ -482,7 +481,7 @@ body {
 } 
 
 
-/* END ANIMATIONS */
+/******************* END ANIMATIONS *********************/
 
 
     .words-lg {
@@ -611,6 +610,11 @@ body {
         animation-fill-mode: forwards;
         animation-direction: normal;
         animation-timing-function: ease-in-out;    
+    }
+
+    .links:hover {
+        display: none;
+        justify-content: left;    
     }
 }
 /********** END MEDIA QUERIES ***********/
