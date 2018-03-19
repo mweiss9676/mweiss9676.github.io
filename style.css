@@ -425,7 +425,7 @@ body {
     right: 0;
 }
 
-/********** MEDIA QUERIES ***********/
+/********************************************************* MEDIA QUERIES *****************************************************/
 
 @media screen and (min-width: 1001px){
     .words-sm {
@@ -588,6 +588,7 @@ body {
         z-index: 4;
     }
 
+
     .selfy:hover ~ .links > .instagram {
         animation-name: vertical-instagram;
         animation-duration: var(--roll-out-menu-duration);
@@ -617,4 +618,4 @@ body {
         justify-content: left;    
     }
 }
-/********** END MEDIA QUERIES ***********/
+/*********************************************** END MEDIA QUERIES ********************************************************/
