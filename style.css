@@ -378,7 +378,7 @@ body {
 }
 
 
-.links:hover > .github, .selfy:hover ~ .links > .github {
+.github-full {
     animation-name: slide-in-github;
     animation-duration: var(--roll-out-menu-duration);
     animation-fill-mode: forwards;
@@ -386,7 +386,7 @@ body {
     animation-timing-function: ease-in-out;
 }
 
-.links:hover > .linkedin, .selfy:hover ~ .links > .linkedin {
+.linkedin-full {
     animation-name: slide-in-linkedin;
     animation-duration: var(--roll-out-menu-duration);
     animation-fill-mode: forwards;
@@ -394,7 +394,7 @@ body {
     animation-timing-function: ease-in-out;
 }
 
-.links:hover > .instagram, .selfy:hover ~ .links > .instagram {
+.instagram-full {
     animation-name: slide-in-instagram;
     animation-duration: var(--roll-out-menu-duration);
     animation-fill-mode: forwards;
@@ -588,8 +588,7 @@ body {
         z-index: 4;
     }
 
-
-    .selfy:hover ~ .links > .instagram {
+    .instagram-mobile {
         animation-name: vertical-instagram;
         animation-duration: var(--roll-out-menu-duration);
         animation-fill-mode: forwards;
@@ -597,7 +596,7 @@ body {
         animation-timing-function: ease-in-out;    
     }
 
-    .selfy:hover ~ .links > .linkedin {
+    .linkedin-mobile {
         animation-name: vertical-linkedin;
         animation-duration: var(--roll-out-menu-duration);
         animation-fill-mode: forwards;
@@ -605,17 +604,12 @@ body {
         animation-timing-function: ease-in-out;    
     }
 
-    .selfy:hover ~ .links > .github {
+    .github-mobile {
         animation-name: vertical-github;
         animation-duration: var(--roll-out-menu-duration);
         animation-fill-mode: forwards;
         animation-direction: normal;
         animation-timing-function: ease-in-out;    
-    }
-
-    .links:hover {
-        display: none;
-        justify-content: left;    
     }
 }
 /*********************************************** END MEDIA QUERIES ********************************************************/
